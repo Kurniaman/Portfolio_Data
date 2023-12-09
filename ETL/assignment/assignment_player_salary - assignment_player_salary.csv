@@ -1,0 +1,11 @@
+employee _id,first_name,last_name,base_salary_monthly
+1,Cristiano,Ronaldo,50000
+2,Lionel,Messi,35000
+3,Kylian,Mbappe,40000
+4,Erling,Haaland,30000
+5,Jude,Bellingham,25000
+6,Virgil,Van Dijk,17500
+7,Bruno,Fernandes,27500
+8,Emiliano,Martinez,10000
+9,William,Saliba,7500
+10,Kaoru,Mitoma,12000

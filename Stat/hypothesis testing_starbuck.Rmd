@@ -1,0 +1,54 @@
+---
+title: "Hypothesis Testing"
+output: html_document
+date: "2023-06-11"
+---
+
+
+```{r}
+dat <- read.csv('survey_starbucks_customer_survey.csv')
+dat
+```
+=> Misal
+choose Rate claim bahwa memiliki rata-rata nilai yang melebihi 4. 
+maka
+1. Menentukan Ho dan H1
+H0: u >= 4
+  H1 : u < 4
+2. Menentukan alpha 
+alpha = 0.05
+3. Jumlah n 
+n= 113
+4. Jenis tes 
+-> Tes ....
+```{r}
+datnoID <- dat %>% select(-Id)
+```
+
+
+```{r}
+datnoID
+```
+```{r}
+meandatnoID <- mean(colMeans(datnoID))
+meandatnoID
+
+meandatChRate <- mean(dat$chooseRate)
+meandatChRate
+
+```
+
+
+```{r}
+
+t.test(x=dat$chooseRate,mu = 3.575221)
+
+
+```
+
+```{r}
+t.test(x=dat$chooseRate,mu = 4)
+```
+
+
+Kesimpulan p-value < alpha -> maka  H0 direject

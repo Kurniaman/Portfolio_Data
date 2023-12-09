@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='serapan.csv (Multiple Connections)' inline='true' name='federated.1w5ezzk0lpv36k10ax3ao1q70r4f' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='serapan' name='textscan.0fqv1vb0j4x4dd148w6yz1tdlxp2'>
+            <connection class='textscan' directory='Data/ITS/Semester 5/Satu Data Unair' filename='serapan.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='pengeluaranfix' name='textscan.0lqklgz1144bfd1cmk1mz1j426h1'>
+            <connection class='textscan' directory='Data/Users/niman/Downloads' filename='pengeluaranfix.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='serapanfix' name='textscan.0t4bvi51ntfrbg1der5th1eurcsp'>
+            <connection class='textscan' directory='Data/ITS/Semester 5/Satu Data Unair' filename='serapanfix.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0t4bvi51ntfrbg1der5th1eurcsp' name='pengeluaranfix.csv' table='[pengeluaranfix#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='integer' name='kodeunit' ordinal='1' />
+            <column datatype='string' name='namaunit' ordinal='2' />
+            <column datatype='date' name='bulan' ordinal='3' />
+            <column datatype='integer' name='jumlah' ordinal='4' />
+            <column datatype='date' name='tahun' ordinal='5' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0t4bvi51ntfrbg1der5th1eurcsp' name='serapanfix.csv' table='[serapanfix#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_ID' separator=','>
+              <column datatype='datetime' name='Created_at' ordinal='0' />
+              <column datatype='string' name='Fakultas' ordinal='1' />
+              <column datatype='date' name='Tahun' ordinal='2' />
+              <column datatype='datetime' name='Tahun Data' ordinal='3' />
+              <column datatype='integer' name='Anggaran' ordinal='4' />
+              <column datatype='integer' name='Serapan' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0t4bvi51ntfrbg1der5th1eurcsp' name='pengeluaranfix.csv' table='[pengeluaranfix#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='integer' name='kodeunit' ordinal='1' />
+              <column datatype='string' name='namaunit' ordinal='2' />
+              <column datatype='date' name='bulan' ordinal='3' />
+              <column datatype='integer' name='jumlah' ordinal='4' />
+              <column datatype='date' name='tahun' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[serapanfix.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;IDR&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Created_at</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Created_at]</local-name>
+            <parent-name>[serapanfix.csv]</parent-name>
+            <remote-alias>Created_at</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fakultas</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Fakultas]</local-name>
+            <parent-name>[serapanfix.csv]</parent-name>
+            <remote-alias>Fakultas</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tahun</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Tahun]</local-name>
+            <parent-name>[serapanfix.csv]</parent-name>
+            <remote-alias>Tahun</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tahun Data</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Tahun Data]</local-name>
+            <parent-name>[serapanfix.csv]</parent-name>
+            <remote-alias>Tahun Data</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Anggaran</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Anggaran]</local-name>
+            <parent-name>[serapanfix.csv]</parent-name>
+            <remote-alias>Anggaran</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Serapan</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Serapan]</local-name>
+            <parent-name>[serapanfix.csv]</parent-name>
+            <remote-alias>Serapan</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[pengeluaranfix.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;IDR&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[pengeluaranfix.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kodeunit</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[kodeunit]</local-name>
+            <parent-name>[pengeluaranfix.csv]</parent-name>
+            <remote-alias>kodeunit</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>namaunit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[namaunit]</local-name>
+            <parent-name>[pengeluaranfix.csv]</parent-name>
+            <remote-alias>namaunit</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bulan</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bulan]</local-name>
+            <parent-name>[pengeluaranfix.csv]</parent-name>
+            <remote-alias>bulan</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jumlah</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[jumlah]</local-name>
+            <parent-name>[pengeluaranfix.csv]</parent-name>
+            <remote-alias>jumlah</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tahun</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[tahun]</local-name>
+            <parent-name>[pengeluaranfix.csv]</parent-name>
+            <remote-alias>tahun</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Anggaran]' role='measure' type='quantitative' />
+      <column caption='tingkat_serapan' datatype='real' name='[Calculation_1804254616460390400]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Serapan])/SUM([Anggaran])' />
+      </column>
+      <column caption='tidak_terserap' datatype='real' name='[Calculation_1804254616463749121]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1-SUM([Serapan])/SUM([Anggaran])' />
+      </column>
+      <column caption='Created at' datatype='datetime' name='[Created_at]' role='dimension' type='ordinal' />
+      <column caption='gabungan_fakultas' datatype='string' name='[Fakultas (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Fakultas]' new-bin='true'>
+          <bin default-name='true' value='&quot;FEB, FF, FH and 16 more&quot;'>
+            <value>&quot;FEB&quot;</value>
+            <value>&quot;FF&quot;</value>
+            <value>&quot;FH&quot;</value>
+            <value>&quot;FIB&quot;</value>
+            <value>&quot;FISIP&quot;</value>
+            <value>&quot;FK&quot;</value>
+            <value>&quot;FKG&quot;</value>
+            <value>&quot;FKH&quot;</value>
+            <value>&quot;FKM&quot;</value>
+            <value>&quot;FKp&quot;</value>
+            <value>&quot;FPK&quot;</value>
+            <value>&quot;FPsi&quot;</value>
+            <value>&quot;FST&quot;</value>
+            <value>&quot;ftmm&quot;</value>
+            <value>&quot;PPS&quot;</value>
+            <value>&quot;SIKIA&quot;</value>
+            <value>&quot;Vokasi&quot;</value>
+            <value>&quot;Vokasi Kp Gresik&quot;</value>
+            <value>&quot;Vokasi Kp Lamongan&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Fakultas1' datatype='string' name='[Fakultas]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Serapan]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='pengeluaranfix.csv' datatype='table' name='[__tableau_internal_object_id__].[pengeluaranfix.csv_D1F7D3AFA27C4326B70DB2F1F15FA275]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='serapanfix.csv' datatype='table' name='[__tableau_internal_object_id__].[serapanfix.csv_0917E7CAF3BE4E2EB18809430FEFD4F7]' role='measure' type='quantitative' />
+      <column caption='Bulan' datatype='date' name='[bulan]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Jumlah' datatype='integer' name='[jumlah]' role='measure' type='quantitative' />
+      <column caption='Kodeunit' datatype='integer' name='[kodeunit]' role='measure' type='quantitative' />
+      <column caption='Namaunit' datatype='string' name='[namaunit]' role='dimension' type='nominal' />
+      <column caption='Tahun1' datatype='date' name='[tahun]' role='dimension' type='ordinal' />
+      <column-instance column='[Anggaran]' derivation='Sum' name='[sum:Anggaran:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Serapan]' derivation='Sum' name='[sum:Serapan:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1804254616460390400]' derivation='User' name='[usr:Calculation_1804254616460390400:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1804254616463749121]' derivation='User' name='[usr:Calculation_1804254616463749121:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Fakultas (group)]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;FKM&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;FEB&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;FEB, FF, FH and 16 more&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;FISIP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;FST&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;FKp&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;FK&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Vokasi Kp Lamongan&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;FF&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Vokasi&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;FKG&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ftmm&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;PPS&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Vokasi Kp Gresik&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;FPK&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;FKH&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;FH&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SIKIA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;FPsi&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;FIB&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616463749121:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1w5ezzk0lpv36k10ax3ao1q70r4f]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Anggaran:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Serapan:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='pengeluaranfix.csv' id='pengeluaranfix.csv_D1F7D3AFA27C4326B70DB2F1F15FA275'>
+            <properties context=''>
+              <relation connection='textscan.0t4bvi51ntfrbg1der5th1eurcsp' name='pengeluaranfix.csv' table='[pengeluaranfix#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='integer' name='kodeunit' ordinal='1' />
+                  <column datatype='string' name='namaunit' ordinal='2' />
+                  <column datatype='date' name='bulan' ordinal='3' />
+                  <column datatype='integer' name='jumlah' ordinal='4' />
+                  <column datatype='date' name='tahun' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='serapanfix.csv' id='serapanfix.csv_0917E7CAF3BE4E2EB18809430FEFD4F7'>
+            <properties context=''>
+              <relation connection='textscan.0t4bvi51ntfrbg1der5th1eurcsp' name='serapanfix.csv' table='[serapanfix#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID' separator=','>
+                  <column datatype='datetime' name='Created_at' ordinal='0' />
+                  <column datatype='string' name='Fakultas' ordinal='1' />
+                  <column datatype='date' name='Tahun' ordinal='2' />
+                  <column datatype='datetime' name='Tahun Data' ordinal='3' />
+                  <column datatype='integer' name='Anggaran' ordinal='4' />
+                  <column datatype='integer' name='Serapan' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Tahun]' />
+              <expression op='[tahun]' />
+            </expression>
+            <first-end-point object-id='serapanfix.csv_0917E7CAF3BE4E2EB18809430FEFD4F7' />
+            <second-end-point object-id='pengeluaranfix.csv_D1F7D3AFA27C4326B70DB2F1F15FA275' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='serapan.csv (Multiple Connections)' name='federated.1w5ezzk0lpv36k10ax3ao1q70r4f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w5ezzk0lpv36k10ax3ao1q70r4f'>
+            <column datatype='integer' name='[Anggaran]' role='measure' type='quantitative' />
+            <column caption='tingkat_serapan' datatype='real' name='[Calculation_1804254616460390400]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Serapan])/SUM([Anggaran])' />
+            </column>
+            <column caption='Fakultas1' datatype='string' name='[Fakultas]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Serapan]' role='measure' type='quantitative' />
+            <column-instance column='[Fakultas]' derivation='None' name='[none:Fakultas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1804254616460390400]' derivation='User' name='[usr:Calculation_1804254616460390400:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' value='p0.00%' />
+            <format attr='font-size' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' value='12' />
+            <format attr='font-weight' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' value='normal' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[none:Fakultas:nk]' value='12' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2dbe5</color>
+                <color>#b5c7da</color>
+                <color>#9ab3ce</color>
+                <color>#81a1c3</color>
+                <color>#6a90b8</color>
+                <color>#557fac</color>
+                <color>#4270a1</color>
+                <color>#306195</color>
+                <color>#21548a</color>
+                <color>#14487f</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' />
+              <text column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[none:Fakultas:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{71CDBE04-68C6-4B2E-9D57-E9A92DC09DB0}' />
+    </worksheet>
+    <worksheet name='Sheet 1 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='serapan.csv (Multiple Connections)' name='federated.1w5ezzk0lpv36k10ax3ao1q70r4f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w5ezzk0lpv36k10ax3ao1q70r4f'>
+            <column datatype='integer' name='[Anggaran]' role='measure' type='quantitative' />
+            <column caption='tingkat_serapan' datatype='real' name='[Calculation_1804254616460390400]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Serapan])/SUM([Anggaran])' />
+            </column>
+            <column caption='gabungan_fakultas' datatype='string' name='[Fakultas (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Fakultas]' new-bin='true'>
+                <bin default-name='true' value='&quot;FEB, FF, FH and 16 more&quot;'>
+                  <value>&quot;FEB&quot;</value>
+                  <value>&quot;FF&quot;</value>
+                  <value>&quot;FH&quot;</value>
+                  <value>&quot;FIB&quot;</value>
+                  <value>&quot;FISIP&quot;</value>
+                  <value>&quot;FK&quot;</value>
+                  <value>&quot;FKG&quot;</value>
+                  <value>&quot;FKH&quot;</value>
+                  <value>&quot;FKM&quot;</value>
+                  <value>&quot;FKp&quot;</value>
+                  <value>&quot;FPK&quot;</value>
+                  <value>&quot;FPsi&quot;</value>
+                  <value>&quot;FST&quot;</value>
+                  <value>&quot;ftmm&quot;</value>
+                  <value>&quot;PPS&quot;</value>
+                  <value>&quot;SIKIA&quot;</value>
+                  <value>&quot;Vokasi&quot;</value>
+                  <value>&quot;Vokasi Kp Gresik&quot;</value>
+                  <value>&quot;Vokasi Kp Lamongan&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Fakultas1' datatype='string' name='[Fakultas]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Serapan]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1804254616460390400]' derivation='User' name='[usr:Calculation_1804254616460390400:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' value='p0.00%' />
+            <format attr='font-size' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' value='12' />
+            <format attr='font-weight' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' value='normal' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2dbe5</color>
+                <color>#b5c7da</color>
+                <color>#9ab3ce</color>
+                <color>#81a1c3</color>
+                <color>#6a90b8</color>
+                <color>#557fac</color>
+                <color>#4270a1</color>
+                <color>#306195</color>
+                <color>#21548a</color>
+                <color>#14487f</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' />
+              <text column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[Fakultas (group)]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{807B5FA1-0113-4ECA-B3F3-8E755974E835}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='serapan.csv (Multiple Connections)' name='federated.1w5ezzk0lpv36k10ax3ao1q70r4f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w5ezzk0lpv36k10ax3ao1q70r4f'>
+            <column datatype='integer' name='[Anggaran]' role='measure' type='quantitative' />
+            <column caption='tingkat_serapan' datatype='real' name='[Calculation_1804254616460390400]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Serapan])/SUM([Anggaran])' />
+            </column>
+            <column caption='tidak_terserap' datatype='real' name='[Calculation_1804254616463749121]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1-SUM([Serapan])/SUM([Anggaran])' />
+            </column>
+            <column datatype='integer' name='[Serapan]' role='measure' type='quantitative' />
+            <column-instance column='[Serapan]' derivation='Sum' name='[sum:Serapan:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1804254616460390400]' derivation='User' name='[usr:Calculation_1804254616460390400:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1804254616463749121]' derivation='User' name='[usr:Calculation_1804254616463749121:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Serapan:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616463749121:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]</rows>
+        <cols>[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]</cols>
+      </table>
+      <simple-id uuid='{43A6FA49-9B42-465C-80C3-8F5E779F86D8}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='serapan.csv (Multiple Connections)' name='federated.1w5ezzk0lpv36k10ax3ao1q70r4f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w5ezzk0lpv36k10ax3ao1q70r4f'>
+            <column datatype='integer' name='[Anggaran]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Serapan]' role='measure' type='quantitative' />
+            <column datatype='datetime' name='[Tahun Data]' role='dimension' type='ordinal' />
+            <column-instance column='[Anggaran]' derivation='Sum' name='[sum:Anggaran:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Serapan]' derivation='Sum' name='[sum:Serapan:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Tahun Data]' derivation='Month-Trunc' name='[tmn:Tahun Data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Tahun Data]' derivation='Quarter-Trunc' name='[tqr:Tahun Data:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Serapan:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Anggaran:qk]' field-type='quantitative' max='1681288936176' min='800000000000' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[tmn:Tahun Data:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Anggaran:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.1712706089019775' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Serapan:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.1712706089019775' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Anggaran:qk] + [federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[sum:Serapan:qk])</rows>
+        <cols>([federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[tqr:Tahun Data:qk] + [federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[tmn:Tahun Data:qk])</cols>
+      </table>
+      <simple-id uuid='{43200AA4-8344-4EC7-8709-7B86766E16B8}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='serapan.csv (Multiple Connections)' name='federated.1w5ezzk0lpv36k10ax3ao1q70r4f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w5ezzk0lpv36k10ax3ao1q70r4f'>
+            <column caption='Bulan' datatype='date' name='[bulan]' role='dimension' type='ordinal' />
+            <column-instance column='[bulan]' derivation='Year' name='[yr:bulan:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[yr:bulan:ok]</cols>
+      </table>
+      <simple-id uuid='{4D1B455A-1E83-4335-9510-F364AA19D6FB}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{E737A305-B752-4AB9-BC21-F3B45A1106F5}' />
+    </window>
+    <window class='worksheet' name='Sheet 1 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[usr:Calculation_1804254616460390400:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{31B1F68F-4132-46FA-A763-47FC3191651B}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]' show-morefewerbutton='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5DDBC3FC-FFCD-4454-9E8A-DC0B24512DE0}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1w5ezzk0lpv36k10ax3ao1q70r4f].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D0DCC03F-FD77-42D3-A1DC-6683C80841FD}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C7842E97-F7BB-4F00-9CFA-0BAC47017C3D}' />
+    </window>
+  </windows>
+</workbook>

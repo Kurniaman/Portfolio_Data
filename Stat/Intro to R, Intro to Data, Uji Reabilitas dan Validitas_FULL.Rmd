@@ -1,0 +1,232 @@
+---
+title: ' Intro to R, Intro to Data, Uji Reabilitas dan Validitas '
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+date: "2023-0x`2-25"
+---
+1. Intro to R 
+## load the data
+```{r}
+
+#Data diambil dari link berikut
+dat <- read.csv('survey_starbucks_customer_survey.csv')
+#Melihat data
+dat
+
+```
+## Melihat dimensi data
+We mentioned that R stores data in data frames, which you might think of as a 
+type of spreadsheet. Each row is a different observation (a different respondent)
+and each column is a different variable (the first is `productRate`, the second 
+`priceRate` and so on). We can see the size of the data frame next to the object 
+name in the workspace or we can type
+
+```{r dim, eval=FALSE}
+dim(dat)
+```
+## Melihat Nama Kolom
+To view the names of the variables, type the command
+```{r names, eval=FALSE}
+names(dat)
+```
+
+## Subsetting Techniques head & tail
+```{r head, eval=FALSE}
+head(dat)
+```
+```{r tail, eval=FALSE}
+tail(dat)
+```
+You could also look at *all* of the data frame at once by typing its name into 
+the console, but that might be unwise here.  We know `dat` (survey_starbucks_customer_survey) has 20,000 rows, so viewing the entire data set would mean flooding your screen.  
+It's better to take small peeks at the data with `head`, `tail` or the subsetting techniques 
+that you'll learn in a moment.
+
+
+## Menampilkan salah satu kolom
+```{r}
+dat$productRate
+```
+
+
+## Membuat grafik dan tipe tipenya
+Next, we 
+make a bar plot of the entries in the table by putting the table inside the 
+`barplot` command.
+
+```{r table-smoke-barplot, eval=FALSE}
+barplot(table(dat$productRate))
+```
+Notice what we've done here! We've computed the table of `dat$productRate` and then
+immediately applied the graphical function, `barplot`. This is an important 
+idea: R commands can be nested. You could also break this into two steps by 
+typing the following:
+
+```{r table-smoke-barplot-twosteps, eval=FALSE}
+productRate <- table(dat$productRate)
+
+barplot(productRate)
+```
+Here, we've made a new object, a table, called `productRate` (the contents of which we
+can see by typing `productRate` into the console) and then used it in as the input for
+`barplot`. The special symbol `<-` performs an *assignment*, taking the output 
+of one line of code and saving it into an object in your workspace.   This is 
+another important idea that we'll return to later
+
+
+
+## Matematika dasar
+The BRFSS questionnaire is a massive trove of information.  A good first step in
+any analysis is to distill all of that information into a few summary statistics
+and graphics.  As a simple example, the function `summary` returns a numerical 
+summary: minimum, first quartile, median, mean, second quartile, and maximum. 
+For `productRate` this is
+
+```{r summary-weight, eval=FALSE}
+summary(dat$productRate)
+```
+R also has built-in functions to compute summary statistics one by one.  For 
+instance, to calculate the mean, median, and variance of `productRate`, type 
+
+```{r weight-mean-var-median, eval=FALSE}
+mean(dat$productRate) 
+var(dat$productRate)
+median(dat$productRate)
+```
+
+## 2. Uji Reabilitas
+Part 2 : Reabilitas
+
+![Alt text](https://qmc.binus.ac.id/files/2014/11/spss7.jpg "a title")
+Teknik yang digunakan adalah Cronbach’s Alpha dimana :
+Jika nilai Cronbach’s Alpha > 0.60 maka reliabel.
+Jika nilai Cronbach’s Alpha < 0.60 maka tidak reliabel.
+semakin tinggi nilai cronbach’s alpha maka
+semakin tinggi pula reliabilitas suatu jawaban responden
+```{r}
+library(psych)
+dat_total1  %>% select(-total_col) %>%alpha()
+```
+
+- raw_alpha: Menunjukkan nilai Cronbach’s alpha. Jika nilai raw_alpha lebih besar dari 0.7 atau 0.8 dikatakan reliabel (Kline,1999) atau ada juga yang menyebutkan lebih dari 0.6.
+- std.alpha: ini nilainya sama dengan raw_alpha (yang dilihat nilai raw_alpha)
+- G6: Lambda 6 Guttman (dihitung dari korelasi berganda kuadrat atau ‘smc’)
+- average_r: korelasi antar item rata-rata (ini digunakan untuk menghitung std.alpha)
+- mean: mean skala (mean dari semua individu)
+- sd: skala sd
+
+- raw.r: korelasi antara item dengan skor total. nilai raw.r item itu sendiri termasuk dalam total, berarti kita menghubungkan item itu dengan item itu sendiri, jadi tentu saja itu akan berkorelasi (sehingga yang digunakan nilai r.cor)
+- r.drop: korelasi item-total tanpa item itu sendiri (yaitu, korelasi item-rest atau korelasi total item yang dikoreksi); Korelasi total item yang rendah menunjukkan bahwa item tersebut tidak berkorelasi baik dengan skala secara keseluruhan
+- r.cor: korelasi item-total yang sudah terkoreksi dari item yang tumpang tindih dan skala reliabilitas
+
+
+## 3. Uji Validitas
+I. UJI VALIDITAS
+
+Validitas dilakukan untuk mengukur sah atau valid tidaknya suatu instrumen (pertanyaan/pernyataan) dalam kuesioner.
+Dalam pengujian validitas terhadap kuesioner, dibedakan menjadi 2, yaitu validitas faktor dan validitas item.
+
+
+## a. Validitas Item
+Validitas item ditunjukkan dengan adanya korelasi atau dukungan terhadap item total (skor total), perhitungan dilakukan dengan cara mengkorelasikan antara skor item dengan skor total item
+
+-> Melakukan korelasi antar skor butir pertanyaan/pernyataan dengan total skor variable
+
+```{r}
+## summarize all column, show the header, and sum across all columns
+library(dplyr)
+
+dat_total1 <- dat %>%
+  mutate(total_col= rowSums(., na.rm=TRUE))
+
+head(dat_total1)
+```
+
+## hapus row ID
+
+```{r}
+dat_total1 <- dat_total1 %>% select(-Id)
+```
+## Korelasi nilai kolom item dengan nilai kolom total Item (Bivariate Pearson/Produk Momen Pearson)
+
+```{r}
+validK1<-cor.test(dat_total1$productRate,dat_total1$total_col)
+validK1
+```
+Jadi data korelasi antar kolom Product Price dengan total kolom yang diperoleh yaitu 
+- t (statistik uji), 
+- df (degree of freedom), 
+- p-value yang akan dibandingkan dengan alpha = 0.05 (default dari RStudio), 
+- alternative hypothesis (H1) : true correlation [ρ (rho)] tidak sama dengan 0. ρ (rho) -> Pearson's correlation coefficient
+- Confidence interval (derajat kepastian/kepercayaan) : 95%
+- Nilai korelasi antar kualitas Item ProductRate dengan kolom total yaitu -0.2614084 sampai 0.1057343
+- Nilai korelasi (r) = -0.08056927
+
+![Alt text](http://leansixsigmadefinition.com/wp-content/uploads/2019/10/p-value-decision-1024x316.jpg "a title")
+Karena nilai p-value (0.3963) >  nilai α (0.05), maka tidak ditolak H0. Kesimpulan dari H0 yang diterima adalah maka kualitas item pernyataan ProductRate terhadap total kolom data, belum ada cukup data untuk mengukur kevalidan informasi atau tidak memiliki pengaruh signifikan antar variabel tersebut
+
+
+```{r}
+res <- cor(dat_total1)
+data.frame(round(res, 3))
+```
+
+## b. Validitas Faktor
+Uji validitas faktor juga bisa disebut dengan metode Confirmatory Factor Analysis ini merupakan metode yang digunakan untuk mencari faktor-faktor yang mampu menjelaskan korelasi antara berbagai indikator independen pada instrumen yang diobservasi
+
+Pengukuran validitas faktor ini dengan cara mengkorelasikan antara skor faktor (penjumlahan item dalam satu faktor) dengan skor total faktor (total keseluruhan faktor)
+
+## Matriks korelasi antar nilai Item Kolom
+```{r}
+corel=cor(dat_total1)
+corel
+```
+
+Output diatas menunjukkan bahwa matriks diagonal korelasi selalu bernilai 1 karena variabel tersebut berkorelasi dengan dirinya sendiri sehingga nilai korelasinya adalah 1. Misalkan diambil contoh korelasi antara productRate dan priceRate nilai korelasinya adalah 0.49723562. Hubungan yang terbentuk antara productRate dan priceRate bersifat positif dan cukup kuat, artinya semakin tinggi angka/nilai productRate (nilai kualitas kopi starbuck) maka kemungkinan untuk angka priceRate (nilai harga starbuck)  tersebut juga ikut tinggi
+
+## KMO
+KMO (Kaiser-Meyer-Olkin) KMO adalah uji yang dilakukan untuk menentukan besaran kelayakan suatu data yang akan digunakan dalam faktor analisis atau suatu perbandingan jarak antara koefisien korelasi dengan koefisien korelasi parsialnya.  Skala uji KMO berkisar antara 0 sampai 1, jika nilai KMO kurang dari 0.5, maka korelasi dinyatakan lemah 
+
+```{r}
+KMO(dat)
+```
+Nilai KMO secara keseluruhan sudah >0.5 yaitu dengan nilai keseluruhan MSA (Measure Sampling Adequacy) 0.78 artinya korelasi yang dimiliki dari item pernyataan cukup bagus. Disini variabel ID dihiraukan atau seharusnya kolom ID dihapus karena tidak memiliki informasi signifikan. Sementara jika suatu kondisi nilai korelasi item kurang dari 0.5, maka variabel tersebut dieliminasi atau tidak diikutkan dalam proses faktor analisis, dan harus mengulangi langkah analisis faktor lagi tapi tanpa mengikutsertakan variabel item tersebut
+
+```{r}
+dat <- dat %>% select(-Id)
+```
+```{r}
+KMO(dat)
+```
+## Uji Bartlett atau Measure Sampling Adequacy (MSA)
+Nilai atau ukuran Bartlett's Test of Sphericity digunakan untuk menguji apakah korelasi antar variabel cukup besar atau tidak untuk analisis faktor (principal component analysis). Istilah lain dari Bartlett's test of sphericity merupakan suatu uji untuk menguji suatu hipotesis (hipotesis nol) yang menyatakan bahwa variabel-variabel dalam populasi penelitian tidak berkorelasi.
+
+Untuk mengetahui apakah korelasi antar variabel cukup besar atau tidak, dapat dibandingkan nilai Sig. (probabilitas) dari Bartlett's of Sphericity terhadap tingkat signifikansi yang digunakan (alpha). Jika nilai Sig. (probabilitas) dari Bartlett's of Sphericity < tingkat signifikansi (alpha), hal ini menunjukkan korelasi yang terjadi antar variabel cukup besar.
+
+```{r}
+bart_spher(dat)
+```
+![Alt text](http://leansixsigmadefinition.com/wp-content/uploads/2019/10/p-value-decision-1024x316.jpg "a title")
+
+Karena nilai p-value (2.22e-16) <  nilai α (0.05), maka H0 ditolak. Kesimpulan dari H0 yang ditolak adalah maka terdapat cukup data untuk mengukur kevalidan informasi dan memiliki pengaruh signifikan antar variabel tersebut
+
+```{r}
+bartlett.test(dat)
+```
+
+## Eigenvalue dan Eigenvectors
+Setelah terpenuhi persyaratan untuk nilai KMO MSA (nilai KMO MSA baik secara keseluruhan atau masing-masing variabel/indikator di atas 0,5) dan uji signifikansi dari Bartlett's Test of Sphericity menunjukkan hasil yang signifikan secara statistika (nilai Sig. < tingkat signifikansi alpha), selanjutnya adalah ekstraksi faktor, yakni mereduksi variabel variabel atau indikator-indikator menjadi beberapa faktor (yang jumlahnya lebih sedikit)
+
+```{r}
+eval=eigen(s)$value
+eigen(s)
+```
+Untuk menampilkan dalam bentuk plot dalam mempermudah melihat variabel data maka :
+```{r}
+plot(eval)
+```
+Dilihat dari scree plot, terdapat 2 titik yang berada diatas nilai 1, dan menjadi jumlah faktornya. Dari nilai eigenvalue dan plot nilai eigenvalue diketahui bahwa nilai eigenvalue yang >1 berjumlah 2 variabel. Sehingga jumlah faktor yang akan dipertahankan dalam faktor analisis yaitu sebanyak 2
+
+

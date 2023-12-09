@@ -1,0 +1,719 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='outbound.csv+ (Multiple Connections)' inline='true' name='federated.1i14mrt0li3k2i1elm58n1bpiqkd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='outbound' name='textscan.1bgfsk31wpxqvf1287op708r1x60'>
+            <connection class='textscan' directory='D:/ITS/Semester 5/Satu Data Unair' filename='outbound.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Inbound' name='textscan.18ukpso0bv9gik186gbln0suq4wo'>
+            <connection class='textscan' directory='D:/ITS/Semester 5/Satu Data Unair' filename='Inbound.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.18ukpso0bv9gik186gbln0suq4wo' name='Inbound.csv' table='[Inbound#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+            <column datatype='string' name='unit_kerja' ordinal='0' />
+            <column datatype='string' name='nama' ordinal='1' />
+            <column datatype='string' name='jenjang' ordinal='2' />
+            <column datatype='string' name='fakultas_asal' ordinal='3' />
+            <column datatype='string' name='tujuan_prodi' ordinal='4' />
+            <column datatype='string' name='jenjang_prodi' ordinal='5' />
+            <column datatype='string' name='univ_asal' ordinal='6' />
+            <column datatype='string' name='negara_asal' ordinal='7' />
+            <column datatype='string' name='program' ordinal='8' />
+            <column datatype='integer' name='tahun' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1bgfsk31wpxqvf1287op708r1x60' name='outbound.csv' table='[outbound#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='integer' name='nim' ordinal='1' />
+              <column datatype='string' name='nama_mhs' ordinal='2' />
+              <column datatype='string' name='prodi_text' ordinal='3' />
+              <column datatype='string' name='fakultas_text' ordinal='4' />
+              <column datatype='string' name='univ_tujuan_text' ordinal='5' />
+              <column datatype='string' name='negara_tujuan_text' ordinal='6' />
+              <column datatype='string' name='jenjang' ordinal='7' />
+              <column datatype='string' name='fakultas_tujuan_text' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='textscan.18ukpso0bv9gik186gbln0suq4wo' name='Inbound.csv' table='[Inbound#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+              <column datatype='string' name='unit_kerja' ordinal='0' />
+              <column datatype='string' name='nama' ordinal='1' />
+              <column datatype='string' name='jenjang' ordinal='2' />
+              <column datatype='string' name='fakultas_asal' ordinal='3' />
+              <column datatype='string' name='tujuan_prodi' ordinal='4' />
+              <column datatype='string' name='jenjang_prodi' ordinal='5' />
+              <column datatype='string' name='univ_asal' ordinal='6' />
+              <column datatype='string' name='negara_asal' ordinal='7' />
+              <column datatype='string' name='program' ordinal='8' />
+              <column datatype='integer' name='tahun' ordinal='9' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[fakultas_asal]' value='[Inbound.csv].[fakultas_asal]' />
+          <map key='[fakultas_text]' value='[outbound.csv].[fakultas_text]' />
+          <map key='[fakultas_tujuan_text]' value='[outbound.csv].[fakultas_tujuan_text]' />
+          <map key='[id]' value='[outbound.csv].[id]' />
+          <map key='[jenjang (Inbound.csv)]' value='[Inbound.csv].[jenjang]' />
+          <map key='[jenjang]' value='[outbound.csv].[jenjang]' />
+          <map key='[jenjang_prodi]' value='[Inbound.csv].[jenjang_prodi]' />
+          <map key='[nama]' value='[Inbound.csv].[nama]' />
+          <map key='[nama_mhs]' value='[outbound.csv].[nama_mhs]' />
+          <map key='[negara_asal]' value='[Inbound.csv].[negara_asal]' />
+          <map key='[negara_tujuan_text]' value='[outbound.csv].[negara_tujuan_text]' />
+          <map key='[nim]' value='[outbound.csv].[nim]' />
+          <map key='[prodi_text]' value='[outbound.csv].[prodi_text]' />
+          <map key='[program]' value='[Inbound.csv].[program]' />
+          <map key='[tahun]' value='[Inbound.csv].[tahun]' />
+          <map key='[tujuan_prodi]' value='[Inbound.csv].[tujuan_prodi]' />
+          <map key='[unit_kerja]' value='[Inbound.csv].[unit_kerja]' />
+          <map key='[univ_asal]' value='[Inbound.csv].[univ_asal]' />
+          <map key='[univ_tujuan_text]' value='[outbound.csv].[univ_tujuan_text]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;IDR&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;IDR&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nim</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nim]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>nim</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nama_mhs</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nama_mhs]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>nama_mhs</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prodi_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[prodi_text]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>prodi_text</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fakultas_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fakultas_text]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>fakultas_text</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>univ_tujuan_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[univ_tujuan_text]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>univ_tujuan_text</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>negara_tujuan_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[negara_tujuan_text]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>negara_tujuan_text</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jenjang</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jenjang]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>jenjang</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fakultas_tujuan_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fakultas_tujuan_text]</local-name>
+            <parent-name>[outbound.csv]</parent-name>
+            <remote-alias>fakultas_tujuan_text</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[outbound.csv_A807E704993A40D69282DFBF4CE6419A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit_kerja</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unit_kerja]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>unit_kerja</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nama</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nama]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>nama</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jenjang</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jenjang (Inbound.csv)]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>jenjang</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fakultas_asal</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fakultas_asal]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>fakultas_asal</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tujuan_prodi</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tujuan_prodi]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>tujuan_prodi</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jenjang_prodi</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jenjang_prodi]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>jenjang_prodi</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>univ_asal</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[univ_asal]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>univ_asal</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>negara_asal</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[negara_asal]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>negara_asal</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>program</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[program]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>program</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tahun</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tahun]</local-name>
+            <parent-name>[Inbound.csv]</parent-name>
+            <remote-alias>tahun</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Inbound.csv' datatype='table' name='[__tableau_internal_object_id__].[Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='outbound.csv' datatype='table' name='[__tableau_internal_object_id__].[outbound.csv_A807E704993A40D69282DFBF4CE6419A]' role='measure' type='quantitative' />
+      <column caption='Fakultas Asal' datatype='string' name='[fakultas_asal]' role='dimension' type='nominal' />
+      <column caption='Fakultas Text' datatype='string' name='[fakultas_text]' role='dimension' type='nominal' />
+      <column caption='Fakultas Tujuan Text' datatype='string' name='[fakultas_tujuan_text]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Jenjang' datatype='string' name='[jenjang]' role='dimension' type='nominal' />
+      <column caption='Jenjang Prodi' datatype='string' name='[jenjang_prodi]' role='dimension' type='nominal' />
+      <column caption='Nama' datatype='string' name='[nama]' role='dimension' type='nominal' />
+      <column caption='Nama Mhs' datatype='string' name='[nama_mhs]' role='dimension' type='nominal' />
+      <column caption='Negara Asal' datatype='string' name='[negara_asal]' role='dimension' type='nominal' />
+      <column caption='Negara Tujuan Text' datatype='string' name='[negara_tujuan_text]' role='dimension' type='nominal' />
+      <column caption='Nim' datatype='integer' name='[nim]' role='measure' type='quantitative' />
+      <column caption='Prodi Text' datatype='string' name='[prodi_text]' role='dimension' type='nominal' />
+      <column caption='Program' datatype='string' name='[program]' role='dimension' type='nominal' />
+      <column caption='Tahun' datatype='integer' name='[tahun]' role='measure' type='quantitative' />
+      <column caption='Tujuan Prodi' datatype='string' name='[tujuan_prodi]' role='dimension' type='nominal' />
+      <column caption='Unit Kerja' datatype='string' name='[unit_kerja]' role='dimension' type='nominal' />
+      <column caption='Univ Asal' datatype='string' name='[univ_asal]' role='dimension' type='nominal' />
+      <column caption='Univ Tujuan Text' datatype='string' name='[univ_tujuan_text]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Inbound.csv' id='Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5'>
+            <properties context=''>
+              <relation connection='textscan.18ukpso0bv9gik186gbln0suq4wo' name='Inbound.csv' table='[Inbound#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+                  <column datatype='string' name='unit_kerja' ordinal='0' />
+                  <column datatype='string' name='nama' ordinal='1' />
+                  <column datatype='string' name='jenjang' ordinal='2' />
+                  <column datatype='string' name='fakultas_asal' ordinal='3' />
+                  <column datatype='string' name='tujuan_prodi' ordinal='4' />
+                  <column datatype='string' name='jenjang_prodi' ordinal='5' />
+                  <column datatype='string' name='univ_asal' ordinal='6' />
+                  <column datatype='string' name='negara_asal' ordinal='7' />
+                  <column datatype='string' name='program' ordinal='8' />
+                  <column datatype='integer' name='tahun' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='outbound.csv' id='outbound.csv_A807E704993A40D69282DFBF4CE6419A'>
+            <properties context=''>
+              <relation connection='textscan.1bgfsk31wpxqvf1287op708r1x60' name='outbound.csv' table='[outbound#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='integer' name='nim' ordinal='1' />
+                  <column datatype='string' name='nama_mhs' ordinal='2' />
+                  <column datatype='string' name='prodi_text' ordinal='3' />
+                  <column datatype='string' name='fakultas_text' ordinal='4' />
+                  <column datatype='string' name='univ_tujuan_text' ordinal='5' />
+                  <column datatype='string' name='negara_tujuan_text' ordinal='6' />
+                  <column datatype='string' name='jenjang' ordinal='7' />
+                  <column datatype='string' name='fakultas_tujuan_text' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[jenjang]' />
+              <expression op='[jenjang (Inbound.csv)]' />
+            </expression>
+            <first-end-point object-id='outbound.csv_A807E704993A40D69282DFBF4CE6419A' />
+            <second-end-point object-id='Inbound.csv_3DFCA13058C541CA813B3D4FA5750BA5' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{211972F5-C9EF-432D-852D-CF447083A917}' />
+    </worksheet>
+    <worksheet name='negara outbound'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='outbound.csv+ (Multiple Connections)' name='federated.1i14mrt0li3k2i1elm58n1bpiqkd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i14mrt0li3k2i1elm58n1bpiqkd'>
+            <column-instance column='[id]' derivation='Count' name='[cnt:id:qk]' pivot='key' type='quantitative' />
+            <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column caption='Negara Tujuan Text' datatype='string' name='[negara_tujuan_text]' role='dimension' type='nominal' />
+            <column-instance column='[negara_tujuan_text]' derivation='None' name='[none:negara_tujuan_text:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1i14mrt0li3k2i1elm58n1bpiqkd].[cnt:id:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2dbe5</color>
+                <color>#b5c7da</color>
+                <color>#9ab3ce</color>
+                <color>#81a1c3</color>
+                <color>#6a90b8</color>
+                <color>#557fac</color>
+                <color>#4270a1</color>
+                <color>#306195</color>
+                <color>#21548a</color>
+                <color>#14487f</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1i14mrt0li3k2i1elm58n1bpiqkd].[cnt:id:qk]' />
+              <color column='[federated.1i14mrt0li3k2i1elm58n1bpiqkd].[cnt:id:qk]' />
+              <text column='[federated.1i14mrt0li3k2i1elm58n1bpiqkd].[none:negara_tujuan_text:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BF408036-54C0-4E6B-AC4D-F2C328135EF4}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='negara outbound'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i14mrt0li3k2i1elm58n1bpiqkd].[cnt:id:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i14mrt0li3k2i1elm58n1bpiqkd].[none:negara_asal:nk]</field>
+            <field>[federated.1i14mrt0li3k2i1elm58n1bpiqkd].[none:negara_tujuan_text:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3379A86D-122D-4A3C-AAE5-EE1EF1E2ED52}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B1B7E836-C09F-415A-82C3-DD3C287270F3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='288' name='Sheet 2' width='288'>
+      iVBORw0KGgoAAAANSUhEUgAAASAAAAEgCAYAAAAUg66AAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAADoUlEQVR4nO3UMQHAMADDsHX8OacwfFRC4Mtn2z6AwF8HAO8yICBjQEDGgICMAQEZAwIy
+      BgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNAQMaAgIwBARkDAjIGBGQM
+      CMgYEJAxICBjQEDGgICMAQEZAwIyBgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQ
+      kDEgIGNAQMaAgIwBARkDAjIGBGQMCMgYEJAxICBjQEDGgICMAQEZAwIyBgRkDAjIGBCQMSAg
+      Y0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNAQMaAgIwBARkDAjIGBGQMCMgYEJAxICBjQEDG
+      gICMAQEZAwIyBgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNAQMaAgIwB
+      ARkDAjIGBGQMCMgYEJAxICBjQEDGgICMAQEZAwIyBgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMC
+      MgYEZAwIyBgQkDEgIGNAQMaAgIwBARkDAjIGBGQMCMgYEJAxICBjQEDGgICMAQEZAwIyBgRk
+      DAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNAQMaAgIwBARkDAjIGBGQMCMgY
+      EJAxICBjQEDGgICMAQEZAwIyBgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEg
+      IGNAQMaAgIwBARkDAjIGBGQMCMgYEJAxICBjQEDGgICMAQEZAwIyBgRkDAjIGBCQMSAgY0BA
+      xoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNAQMaAgIwBARkDAjIGBGQMCMgYEJAxICBjQEDGgICM
+      AQEZAwIyBgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNAQMaAgIwBARkD
+      AjIGBGQMCMgYEJAxICBjQEDGgICMAQEZAwIyBgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYE
+      ZAwIyBgQkDEgIGNAQMaAgIwBARkDAjIGBGQMCMgYEJAxICBjQEDGgICMAQEZAwIyBgRkDAjI
+      GBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNAQMaAgIwBARkDAjIGBGQMCMgYEJAx
+      ICBjQEDGgICMAQEZAwIyBgRkDAjIGBCQMSAgY0BAxoCAjAEBGQMCMgYEZAwIyBgQkDEgIGNA
+      QMaAgIwBARkDAjIGBGQuC2AGPGKy4EIAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='288' name='negara outbound' width='288'>
+      iVBORw0KGgoAAAANSUhEUgAAASAAAAEgCAYAAAAUg66AAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAMQElEQVR4nO3dSWyc933G8eedhcNtyBnuFC2Km/bFtmzZkWy5kmMljoLarW0URtAGAXJI
+      20OPQY9F0XOQQ1ugQHJI0LoIeumhaCC0bhPHsRPbkWVLskSbEiVR3Nchh5whZ3l7UO1Yli3F
+      djgPRX8/Fw7fAcnfnwC/nP/LlzNBGIahAMAg4h4AwBcXAQJgQ4AA2MQ+eiCTzev88IRjFmDT
+      6elsUqjAPcaGdUuAzl4a1x//9Y8cswCbzt9950mVgrh7jA2LLRgAGwIEwIYAAbC5bYD6tjTp
+      L545LEn67p8eU39X8wf3PXd8v6KRTz65Fo0E6ulM/57GBDaH+dlJjV275B5jw7jlJPSHhaGU
+      Wy2od0uTFrN5RSMR/dN3n9W54QlNzC6prSmp7/3VH+qFU6dVKJV1dWJe6WSNvnXyQX3/J79Q
+      TSKuQ7u36uSRXfqbH/yXrk7MV2pdwMYUSmv5vP757/9W6ZYObRvYoyvvndf2vQd17dIFXb88
+      qBPPfktnXnlRTW2dOvLE0+6J19Udt2CnB0d14tB2vfnumNINNfrPVy+qUCwpGgnUmqrTv5w6
+      rURVTJNzS9rantKl67P6yYtv6Z62lIIgUCQS6PV3rqu5obYS6wE2rGKxoOzivFayi9p78BFJ
+      Ul2yUY9+9RnNz0wo3dKh1s6tCstlHf7yU0o1tZknXn+3fQQ0PruoyblAC0s5zS/lVCqXVSyV
+      9fqFERVLZS2trCoWjej6VEbd7SktLueVWc4rm1vTheFJhZKm5rNKJWt0aXS2QksCNqZcdklB
+      ENHOew/p+uV3tbV/t2YmrmtiZFgPPPoVzU6OqWvbgNKtHYpGo6qurXOPvO6Cj/4z6stvDX+m
+      64CC4MaWDcBv3ek6oPd//ILgi3mx4m0fAX0axAf49L6o4Xkff4YHYEOAANgQIAA2BAiADQEC
+      YEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2
+      BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOA
+      ANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiA
+      DQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQ
+      IAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQEC
+      YEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2
+      BAiADQECYEOAANgQIAA2BAiADQECYEOAANgQIAA2BAiADQECYBNzDwBsZrFoRN3tje4xNiwC
+      BKyjSBAoXVflHmPDYgsGwIYAAbAhQABsOAcEVMj01KTOv/2mGlNpVdfUaGDHbsXjcfdYVgQI
+      qJB4PK7s0qL6Bnbo6pXLqq9P6tR//LuaW1rVv2OXXn35Zzp67IRee/UXKpWKOnz0uH79y59r
+      5+59yq2saHR0RA8fOaqhwYtqaWvTKy/9r3bs2qOTTz+nIAjcy/tM2IIBFRKLxXXsxNd07cpl
+      ZRczCoJAj3/lpFra2pVZWNBTzz6vUrmkZLJBy9mscrkVPf3cN1SVSCgMQx1/4kldu3JZe/Yd
+      UCrdrJqaGlUlEu5lfS48AgIqJBqNavDCOW3r7VcsFldjKqVSuaz6ZIOmpyb08/8+pfseeEi7
+      9h3Qrr37pSDQ4Dvn1L9jlzo6uzQ/N6uHH/kDxaJRRWMxHXnscSUb7u5rjAgQUCE1tbW674GH
+      bjmeTDaoPtmg9s4upZuaFY1GJUnFYkGRSFSRyI2Nyj3dPTd93IH7H1z3mdcbAQI2gNq6OtXW
+      1d10LBbb/CeoOQcEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAA
+      GwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAh
+      QABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIE
+      wIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwCbmHgDYzIJI
+      oIbahHuMDYsAAesoLIdaWllzj7FhsQUDYEOAANgQIKBCwjBUsVi45fja2prCMDRM5EeAgApZ
+      zec1+M555XM5LczPqVwuK5td0kv/c0qFtTUtzM+pWCxqeTmrzMK8yuWSFjMLyudzyuVWtJhZ
+      0OWhQc3Nzmhhfk653MpdHy5OQgMVVC6X9MuXXtTU5Li+9MgxnX79V5qZnlS6qVlXhy+pp2+7
+      3jl7RoXCmg4fPa4f/uP3de/BQyoUCqqqqtLAzt2KVyX0g3/4nnr7t+vPvv2Xikaj7mV9ZgQI
+      qLDunj7dd/AhTU6Mqa29Q4lEQqurqzp46EsaHxtVT9+AmppblFtZ1qPHnlDf9p0ql0uaGh9T
+      bmVZ2aVFHT1+QkuLGZVKRQIE4M6qEglt37VHkSCiSDSqhlRKTTPTCoJAqXSzJifGdPDQYZWK
+      BUWjMUWiUbW1d6q6plZSqLb2TqVSaUVjcSWTjapPJhWPx93L+lwIEFAhkUhE1dU1Nx3r6Oz6
+      4Hb3tt4bNxK/vXCxa+u2j/1c93R//PG7DSehAdgQIAA2BAiADQECYEOAANgQIAA2BAiADQEC
+      YEOAANgQIAA2BAiADQECYEOAANgQIAA2tzwdRzpZo8cfHHDMAmw6nS0N7hE2tFsCVFtTrd39
+      m+O5RgC3VEO9FJbdY2xYbMEA2BAgADYECIDNbQO0OD+tV376rxoZOqfpsau33L8wM665qTFN
+      jQ5/4ucoFtY0MnT+808KYNO57ZPSN6RbVdfYrK7e3br45su68MbPdODIV3XutRdVVVWt7p33
+      KharUnFtVWde/qmymTn17zukS2dfU6q1U43N7Rp6+1fq6ttTqfUAuIv8zluwdGunjjz5vFay
+      GYXlUKPDF7X2/6/MGEoqrOWVzcxqfnpM9z/2daWaO5RfXtLhJ59X5C5+3SIA6+eOL8uzpXen
+      gkighnSrItGYGpvatHVgr7r6dinVukXxqiqVikmF5bLaunqVTLWoqrpWjS0dqq5LanJkSM0d
+      3ZVYC4C7zB0D1Np545qguob0B2/fv/1h9Y1NN70fr0oomWpWSyfxAfDx+CsYABsCBMCGAAGw
+      IUAAbAgQABsCBMCGAAGwIUAAbAgQABsCBMCGAAGwIUAAbAgQABsCBMCGAAGwIUAAbAgQABsC
+      BMCGAAGwIUAAbAgQABsCBMCGAAGwIUAAbAgQABsCBMCGAAGwIUAAbGLuAYDNLBIEamqocY+x
+      YREgYB2FCpVfLbjH2LDYggGwIUAAbAgQUCGlUkln33pTI1evKAzDm+4rFosql8u3HP+wcrms
+      TGbhtl9jdmb69zJrpXAOCKiQ69evaW1tVVWJhGamp5RIJG5ER9KZ029oJZtVojqh3r4BTYyP
+      a/999+u9wQvq6R2QFGpyckL53Io6Ors0Njqi/fce1Mi1K1pZXtbuvfv19pnfaOTqFf3Rc8+7
+      l/o7I0BAhXR2btHE6KiG3hvUyvKy6pNJBUGg+vqklhYzqqmtVX19g2LxuCbGx1Qul/XCj3+o
+      x44/oZraWu3Zd0CS9N67F/VvL/xY3/z2n2sxs6BoLKa3Tr+hcrmsSDRqXuWnwxYMqJCF+QUV
+      CmvK53La2t2judkZzc5Mq6m5RbFYTK1t7VpbW9XQu4Nqbm1VXX29nvmTb+jBhw+rt29APT19
+      CoKIljIZnXzqGa3mc+rp61dvX79WV/PKLi+pVCq5l/mpBOFHNp3D4wv60amzrnmATeVrD/ep
+      rorf85+E7wwAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAA
+      GwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAh
+      QABsCBAAGwIEwIYAAbAhQABsCBAAGwIEwIYAAbAhQABsgjAMww8fmF/K68zQpGseYFPZfk9a
+      8WjgHmPD+j+KXtF4TpQ6rAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,183 @@
+---
+title: "ARIMA Challenge"
+author: "Asisten"
+date: "2023-11-21"
+output: html_document
+---
+
+## Deskripsi Tugas
+
+Lakukan analitika deskriptif (pola data) dan prediktif (ARIMA) pada dataset terlampir: dataset_arima.csv (pilih salah satu sektor dari 7 sektor yang ada untuk dianalisa)
+
+Tentukan Model ARIMA terbaik yang dapat digunakan untuk prediksi
+
+## ARIMA Model
+
+Model deret waktu yang popular adalah model Autoregresive Integrated Moving Averange (ARIMA) yang dikembangkan oleh George E. P. Box dan Gwilyam M. Jenkins. Identifikasi model dapat dilihat dari hasil ACF dan PACF deret waktu. ARIMA sangat baik dalam ketepatan peramalan jangka pendek, tetapi kurang tepat dalam peramalan jangka panjang. ARIMA adalah model yang mengabaikan variabel independen dalam membuat sebuah peramalan dan model yang mengansumsikan data harus stationer (Wei, 1990).
+
+Tujuan model ARIMA adalah menentukan hubungan statistik yang baik antar variabel yang diramalkan dengan nilai masa lalu variabel tersebut sehingga peramalan dapat dilakukan dengan model tersebut. Model ARIMA merupakan gabungan dari model Autoregressive (AR) dan model Moving Average (MA).
+
+
+### Import Library
+
+
+```{r}
+library(tidyverse)
+library(tseries)
+library(forecast)
+```
+
+
+### Import Data
+```{r}
+df <- read.csv('dataset_arima.csv')
+#Melihat data
+df
+```
+```{r}
+col_names <- names(df)
+print(col_names)
+```
+
+### Preprocessing Data
+```{r}
+# Analisis Deskriptif
+summary(df$Clothing)
+```
+```{r}
+# Pengukuran Pusat
+mean_value <- mean(df$Clothing)
+median_value <- median(df$Clothing)
+mode_value <- as.numeric(names(sort(table(df$Clothing), decreasing = TRUE)[1]))
+
+# Pemusatan Distribusi
+range_value <- diff(range(df$Clothing))
+quartiles <- quantile(df$Clothing, c(0.25, 0.5, 0.75))
+standard_deviation <- sd(df$Clothing)
+
+mean_value
+median_value
+mode_value
+range_value
+quartiles
+standard_deviation
+```
+
+
+```{r}
+# Mengecek dan mengatasi missing values
+df <- na.omit(df)
+
+```
+
+
+```{r}
+# Instal paket zoo jika belum diinstal
+# install.packages("zoo")
+
+# Memuat paket zoo
+library(zoo)
+
+# Konversi kolom "Month" ke format waktu
+df$Month <- as.yearmon(df$Month, format = "%Y-%m")
+
+# Atau jika format tanggalnya "YYYY-MM-DD", Anda dapat menggunakan:
+# df$Month <- as.Date(df$Month, format = "%Y-%m-%d")
+
+```
+
+```{r}
+
+# Plot data setelah konversi
+plot(df$Month, df$Clothing, type = "l", col = "blue", xlab = "Month", ylab = "Clothing Sales", main = "Monthly Clothing")
+
+
+```
+
+```{r}
+# Uji Phillips-Perron untuk stationer
+pp_test_result <- PP.test(df$Clothing)
+print(pp_test_result)
+```
+P-value yang rendah (0.01) menunjukkan bahwa kita dapat `menolak hipotesis nol` bahwa deret waktu memiliki akar unit atau tidak stasioner. Oleh karena itu, hasil ini menunjukkan bahwa data `df$Clothing bersifat stasioner` menurut Phillips-Perron Unit Root Test.
+
+```{r}
+# Menghasilkan histogram dari variabel Clothing
+hist(df$Clothing, breaks = "Sturges", main = "Histogram Clothing", xlab = "Clothing")
+
+```
+Data cukup terdistribusi normal
+
+
+
+```{r}
+dataset_diff1 <- diff(df$Clothing)
+dataset_diff2 <- diff(df$Clothing, lag = 12) 
+
+#acf dif1
+acf(dataset_diff1, main="ACF 1" , lag.max = 20)
+pacf(dataset_diff1, main="PACF 1" , lag.max = 20)
+
+#acf diff2
+acf(dataset_diff2, main="ACF 2" , lag.max = 20)
+pacf(dataset_diff2, main="PACF 2" , lag.max = 20)
+
+#diff pertama
+plot(dataset_diff1, type = "l", main = "Clothing ACF", xlab = "Month", ylab = "Clothing")
+
+#diff kedua
+plot(dataset_diff2, type = "l", main = "Clothing PACF", xlab = "Month", ylab = "Clothing")
+```
+
+
+### Model 
+
+
+```{r}
+library('forecast')
+```
+
+
+
+```{r}
+# Fit an automatic ARIMA model
+fit <- auto.arima(df$Clothing)
+
+# Check that the residuals look like white noise
+checkresiduals(fit)
+```
+
+```{r}
+# Summarize the model
+summary(fit)
+```
+
+```{r}
+fit2 <- auto.arima(df$Clothing, stepwise = FALSE)
+summary(fit2)
+```
+```{r}
+# Melakukan forecast untuk 2 tahun ke depan
+forecast_values <- forecast(fit2, h = 8)
+
+
+# Melihat plot forecast menggunakan fungsi dasar
+plot(forecast_values, main = "2 year forecast of Clothing")
+
+```
+
+
+```{r}
+# Melihat nilai forecast
+print(forecast_values)
+
+```
+```{r}
+# Menghitung metrik evaluasi kinerja
+accuracy(forecast_values)
+
+```
+
+
+
+

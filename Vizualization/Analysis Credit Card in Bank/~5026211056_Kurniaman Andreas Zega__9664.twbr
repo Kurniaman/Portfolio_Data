@@ -1,0 +1,1424 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/cities_transactions?rev=1.0' id='card_type' path='/workbooks' revision='1.7' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Credit card transactions - India - Simple' inline='true' name='federated.057fci4133buem17nctb60ws2v0t' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Credit card transactions - India - Simple' name='textscan.0abhux4030mykh16ie9kg198ysr5'>
+            <connection class='textscan' directory='C:/Users/niman/Downloads' filename='Credit card transactions - India - Simple.csv' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0abhux4030mykh16ie9kg198ysr5' name='Credit card transactions - India - Simple.csv' table='[Credit card transactions - India - Simple#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ID' separator=','>
+            <column datatype='integer' name='index' ordinal='0' />
+            <column datatype='string' name='City' ordinal='1' />
+            <column datatype='date' name='Date' ordinal='2' />
+            <column datatype='string' name='Card Type' ordinal='3' />
+            <column datatype='string' name='Exp Type' ordinal='4' />
+            <column datatype='boolean' name='Gender' ordinal='5' />
+            <column datatype='integer' name='Amount' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0abhux4030mykh16ie9kg198ysr5' name='Credit card transactions - India - Simple.csv' table='[Credit card transactions - India - Simple#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ID' separator=','>
+            <column datatype='integer' name='index' ordinal='0' />
+            <column datatype='string' name='City' ordinal='1' />
+            <column datatype='date' name='Date' ordinal='2' />
+            <column datatype='string' name='Card Type' ordinal='3' />
+            <column datatype='string' name='Exp Type' ordinal='4' />
+            <column datatype='boolean' name='Gender' ordinal='5' />
+            <column datatype='integer' name='Amount' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;IDR&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>index</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Card Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Card Type]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Card Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Exp Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Exp Type]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Exp Type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Amount]</local-name>
+            <parent-name>[Credit card transactions - India - Simple.csv]</parent-name>
+            <remote-alias>Amount</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Zero' datatype='integer' name='[Calculation_1072982675388211200]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='0' />
+      </column>
+      <column caption='gender.c' datatype='string' name='[Calculation_199847297339416576]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; ELSE &apos;MALE&apos;&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Exp Type]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+      <column caption='Index' datatype='integer' name='[index]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_199847297339416576]' derivation='None' name='[none:Calculation_199847297339416576:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Exp Type]' derivation='None' name='[none:Exp Type:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1weh6qo0e90x7l14bu1ra0hu5a5k.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/16/2023 08:59:57 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>index</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[index]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>index</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26052</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1400</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1123</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Card Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Card Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Card Type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Exp Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Exp Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Exp Type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Amount</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Credit card transactions - India - Simple.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24834</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Exp Type:nk]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;Bills&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;Grocery&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;Fuel&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;Entertainment&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;Food&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;Travel&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_199847297339416576:nk]' type='palette'>
+            <map to='#005500'>
+              <bucket>&quot;FEMALE&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;MALE&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='index' />
+        <field-sort-custom-order field='City' />
+        <field-sort-custom-order field='Date' />
+        <field-sort-custom-order field='Card Type' />
+        <field-sort-custom-order field='Exp Type' />
+        <field-sort-custom-order field='Gender' />
+        <field-sort-custom-order field='Calculation_199847297339416576' />
+        <field-sort-custom-order field='Amount' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Credit card transactions - India - Simple.csv' id='Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F'>
+            <properties context=''>
+              <relation connection='textscan.0abhux4030mykh16ie9kg198ysr5' name='Credit card transactions - India - Simple.csv' table='[Credit card transactions - India - Simple#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID' separator=','>
+                  <column datatype='integer' name='index' ordinal='0' />
+                  <column datatype='string' name='City' ordinal='1' />
+                  <column datatype='date' name='Date' ordinal='2' />
+                  <column datatype='string' name='Card Type' ordinal='3' />
+                  <column datatype='string' name='Exp Type' ordinal='4' />
+                  <column datatype='boolean' name='Gender' ordinal='5' />
+                  <column datatype='integer' name='Amount' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Tren of transaction '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Sans Serif Collection'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/exp_type/Sheet4?rev=' id='trenoftransaction' path='/workbooks/card_type' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.057fci4133buem17nctb60ws2v0t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.057fci4133buem17nctb60ws2v0t'>
+            <_.fcp.ObjectModelTableType.false...column caption='Credit card transactions - India - Simple.csv' datatype='integer' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.true...column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month-Trunc' name='[tmn:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' field-type='quantitative' max='1467' min='1050' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.3756906986236572' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]</rows>
+        <cols>[federated.057fci4133buem17nctb60ws2v0t].[tmn:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{8BBB7873-75EF-412D-879B-5306A17A8BAE}' />
+    </worksheet>
+    <worksheet name='card type of transactions'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/exp_type/Sheet3?rev=' id='cardtypeoftransactions' path='/workbooks/card_type' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.057fci4133buem17nctb60ws2v0t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.057fci4133buem17nctb60ws2v0t'>
+            <column datatype='string' name='[Card Type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Credit card transactions - India - Simple.csv' datatype='integer' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.true...column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Card Type]' derivation='None' name='[none:Card Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]' filter-group='4'>
+            <groupfilter function='level-members' level='[yr:Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]</rows>
+        <cols>[federated.057fci4133buem17nctb60ws2v0t].[none:Card Type:nk]</cols>
+      </table>
+      <simple-id uuid='{46CBF609-6162-43CA-B4F8-4C6D11FBE75B}' />
+    </worksheet>
+    <worksheet name='cities_transactions'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/exp_type/Sheet2?rev=' id='cities_transactions' path='/workbooks/card_type' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.057fci4133buem17nctb60ws2v0t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.057fci4133buem17nctb60ws2v0t'>
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Credit card transactions - India - Simple.csv' datatype='integer' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.true...column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#cae1ca</color>
+                <color>#a7d1a7</color>
+                <color>#87c287</color>
+                <color>#6bb26b</color>
+                <color>#51a351</color>
+                <color>#3a933a</color>
+                <color>#278327</color>
+                <color>#177417</color>
+                <color>#0a640a</color>
+                <color>#005500</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' />
+              <color column='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' />
+              <text column='[federated.057fci4133buem17nctb60ws2v0t].[none:City:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{DEC6CDBF-D221-4122-B9E4-CC3C37331830}' />
+    </worksheet>
+    <worksheet name='exp type'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/exp_type/Sheet5?rev=' id='exptype' path='/workbooks/card_type' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.057fci4133buem17nctb60ws2v0t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.057fci4133buem17nctb60ws2v0t'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Credit card transactions - India - Simple.csv' datatype='integer' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Exp Type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Exp Type]' derivation='None' name='[none:Exp Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]' filter-group='4'>
+            <groupfilter function='level-members' level='[yr:Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='display' class='1' field='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' field-type='quantitative' major-origin='0' major-spacing='1000' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.36182320117950439' />
+                <format attr='mark-color' value='#59a14f' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='6.3166670799255371' />
+                <format attr='mark-color' value='#59a14f' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.057fci4133buem17nctb60ws2v0t].[none:Exp Type:nk]</rows>
+        <cols>([federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk] + [federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk])</cols>
+      </table>
+      <simple-id uuid='{FF731963-7D99-450D-90E6-CA9A9839F176}' />
+    </worksheet>
+    <worksheet name='gender_transaction'>
+      <repository-location id='gender_transaction' path='/workbooks/card_type' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Credit card transactions - India - Simple' name='federated.057fci4133buem17nctb60ws2v0t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.057fci4133buem17nctb60ws2v0t'>
+            <column caption='Zero' datatype='integer' name='[Calculation_1072982675388211200]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='0' />
+            </column>
+            <column caption='gender.c' datatype='string' name='[Calculation_199847297339416576]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Gender] = FALSE then &apos;FEMALE&apos; ELSE &apos;MALE&apos;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Credit card transactions - India - Simple.csv' datatype='integer' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column datatype='boolean' name='[Gender]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='Credit card transactions - India - Simple.csv' datatype='table' name='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Calculation_199847297339416576]' derivation='None' name='[none:Calculation_199847297339416576:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1072982675388211200]' derivation='Sum' name='[sum:Calculation_1072982675388211200:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]' filter-group='4'>
+            <groupfilter function='level-members' level='[yr:Date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.057fci4133buem17nctb60ws2v0t].[sum:Calculation_1072982675388211200:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='display' class='1' field='[federated.057fci4133buem17nctb60ws2v0t].[sum:Calculation_1072982675388211200:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.057fci4133buem17nctb60ws2v0t].[sum:Calculation_1072982675388211200:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' scope='cols' value='bold' />
+            <format attr='color' scope='cols' value='#000000' />
+            <format attr='font-size' scope='cols' value='12' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='6.3166670799255371' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.057fci4133buem17nctb60ws2v0t].[sum:Calculation_1072982675388211200:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.057fci4133buem17nctb60ws2v0t].[none:Calculation_199847297339416576:nk]' />
+              <size column='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' />
+              <text column='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[pcto:cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' />
+              <text column='[federated.057fci4133buem17nctb60ws2v0t].[none:Calculation_199847297339416576:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.0386741161346436' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.057fci4133buem17nctb60ws2v0t].[sum:Calculation_1072982675388211200:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Total Transactions: &#10;&lt;</run>
+                <run>[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.057fci4133buem17nctb60ws2v0t].[sum:Calculation_1072982675388211200:qk] + [federated.057fci4133buem17nctb60ws2v0t].[sum:Calculation_1072982675388211200:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{F6DDD6B3-047B-473C-AB42-A27D558A8A1F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='1000' maxwidth='1000' minheight='1000' minwidth='1000' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Credit card transactions - India - Simple' name='federated.057fci4133buem17nctb60ws2v0t' />
+      </datasources>
+      <datasource-dependencies datasource='federated.057fci4133buem17nctb60ws2v0t'>
+        <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+        <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97400' id='122' param='vert' type-v2='layout-flow' w='97400' x='1300' y='1300'>
+            <zone h='7800' id='7' param='horz' type-v2='layout-flow' w='97400' x='1300' y='1300'>
+              <zone fixed-size='206' h='7800' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='97400' x='1300' y='1300'>
+                <zone fixed-size='70' forceUpdate='true' h='7800' id='19' is-fixed='true' type-v2='text' w='97400' x='1300' y='1300'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff' fontname='Poppins Black' fontsize='28'>DASHBOARD CREDIT CARD</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='background-color' value='#005500' />
+                  </zone-style>
+                </zone>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#005500' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='5' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='31900' id='13' name='Tren of transaction ' show-title='false' w='88700' x='5900' y='16700' />
+        <zone h='31200' id='18' name='card type of transactions' show-title='false' w='40200' x='54600' y='52300' />
+        <zone h='5800' id='104' type-v2='dashboard-object' w='20200' x='77800' y='9900'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{345F22AB-D085-4213-8001-6C2C5D1CDC1B}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Distributing</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+              <format attr='background-color' value='#55aa007e' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='5900' id='107' type-v2='dashboard-object' w='16400' x='59900' y='9800'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{345F22AB-D085-4213-8001-6C2C5D1CDC1B}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Expenses</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+              <format attr='background-color' value='#55aa007e' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='30800' id='120' name='gender_transaction' show-title='false' w='44200' x='6700' y='52600'>
+          <layout-cache minheight='101' type-h='scalable' type-w='fixed' />
+        </zone>
+        <zone h='7600' id='124' name='gender_transaction' pane-specification-id='2' param='[federated.057fci4133buem17nctb60ws2v0t].[none:Calculation_199847297339416576:nk]' type-v2='color' w='14000' x='40500' y='53100' />
+        <zone h='5700' id='123' mode='dropdown' name='gender_transaction' param='[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]' show-title='false' type-v2='filter' w='24700' x='7200' y='10900' />
+        <zone forceUpdate='true' h='4400' id='131' type-v2='text' w='36100' x='6200' y='89600'>
+          <formatted-text>
+            <run fontname='Poppins'>Sumber : </run>
+            <run auto-url='true' fontcolor='#000000' fontname='Poppins' hyperlink='tabdoc:load-url url=&amp;quot;https://s.id/1A3NZ&amp;quot;'>https://s.id/1A3NZ</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='139' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='138' param='vert' type-v2='layout-flow' w='98400' x='800' y='800'>
+                <zone fixed-size='70' forceUpdate='true' h='7800' id='19' type-v2='text' w='97400' x='1300' y='1300'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff' fontname='Poppins Black' fontsize='28'>DASHBOARD CREDIT CARD</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#005500' />
+                  </zone-style>
+                </zone>
+                <zone h='5900' id='107' type-v2='dashboard-object' w='16400' x='59900' y='9800'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{345F22AB-D085-4213-8001-6C2C5D1CDC1B}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Expenses</caption>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+                      <format attr='background-color' value='#55aa007e' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5800' id='104' type-v2='dashboard-object' w='20200' x='77800' y='9900'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{345F22AB-D085-4213-8001-6C2C5D1CDC1B}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Distributing</caption>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+                      <format attr='background-color' value='#55aa007e' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='31900' id='13' is-fixed='true' name='Tren of transaction ' show-title='false' w='88700' x='5900' y='16700'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='31200' id='18' is-fixed='true' name='card type of transactions' show-title='false' w='40200' x='54600' y='52300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5700' id='123' mode='dropdown' name='gender_transaction' param='[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]' show-title='false' type-v2='filter' w='24700' x='7200' y='10900'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='30800' id='120' is-fixed='true' name='gender_transaction' show-title='false' w='44200' x='6700' y='52600'>
+                  <layout-cache minheight='101' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7600' id='124' name='gender_transaction' pane-specification-id='2' param='[federated.057fci4133buem17nctb60ws2v0t].[none:Calculation_199847297339416576:nk]' type-v2='color' w='14000' x='40500' y='53100'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4400' id='131' type-v2='text' w='36100' x='6200' y='89600'>
+                  <formatted-text>
+                    <run fontname='Poppins'>Sumber : </run>
+                    <run auto-url='true' fontcolor='#000000' fontname='Poppins' hyperlink='tabdoc:load-url url=&amp;quot;https://s.id/1A3NZ&amp;quot;'>https://s.id/1A3NZ</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#005500' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='5' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6F76C247-6BC1-4C4A-A515-0A67D3DCAE28}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='1000' maxwidth='1000' minheight='1000' minwidth='1000' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97400' id='126' param='horz' type-v2='layout-flow' w='97400' x='1300' y='1300'>
+            <zone h='97400' id='122' param='horz' type-v2='layout-flow' w='16000' x='1300' y='1300'>
+              <zone fixed-size='160' h='97400' id='121' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='1300' y='1300' />
+            </zone>
+            <zone fixed-size='160' h='97400' id='125' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='17300' y='1300'>
+              <zone h='8100' id='127' name='cities_transactions' pane-specification-id='0' param='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' type-v2='color' w='16000' x='17300' y='1300'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#005500' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='5' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='5900' id='112' type-v2='dashboard-object' w='16400' x='60100' y='10400'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{0FFBEC6E-974B-438A-B035-A30237C3C341}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Home</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+              <format attr='background-color' value='#55aa007e' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='5800' id='113' type-v2='dashboard-object' w='20200' x='77800' y='10500'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{345F22AB-D085-4213-8001-6C2C5D1CDC1B}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Expenses</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+              <format attr='background-color' value='#55aa007e' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone fixed-size='70' forceUpdate='true' h='7800' id='123' is-fixed='true' type-v2='text' w='97400' x='1000' y='1000'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='Poppins Black' fontsize='28'>DASHBOARD CREDIT CARD</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+            <format attr='background-color' value='#005500' />
+          </zone-style>
+        </zone>
+        <zone h='51200' id='124' name='cities_transactions' show-title='false' w='80500' x='7900' y='22700'>
+          <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+        </zone>
+        <zone h='7200' id='128' name='cities_transactions' playctrls='0' show-title='false' slider='0' synchronized='1' trailctrls='0' type-v2='currpage' w='16800' x='8100' y='15600' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='144' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='143' param='vert' type-v2='layout-flow' w='98400' x='800' y='800'>
+                <zone fixed-size='70' forceUpdate='true' h='7800' id='123' type-v2='text' w='97400' x='1000' y='1000'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff' fontname='Poppins Black' fontsize='28'>DASHBOARD CREDIT CARD</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#005500' />
+                  </zone-style>
+                </zone>
+                <zone h='5900' id='112' type-v2='dashboard-object' w='16400' x='60100' y='10400'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{0FFBEC6E-974B-438A-B035-A30237C3C341}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Home</caption>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+                      <format attr='background-color' value='#55aa007e' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5800' id='113' type-v2='dashboard-object' w='20200' x='77800' y='10500'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{345F22AB-D085-4213-8001-6C2C5D1CDC1B}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Expenses</caption>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+                      <format attr='background-color' value='#55aa007e' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='51200' id='124' is-fixed='true' name='cities_transactions' show-title='false' w='80500' x='7900' y='22700'>
+                  <layout-cache cell-count-h='1' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8100' id='127' name='cities_transactions' pane-specification-id='0' param='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' type-v2='color' w='16000' x='17300' y='1300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7200' id='128' name='cities_transactions' playctrls='0' show-title='false' slider='0' synchronized='1' trailctrls='0' type-v2='currpage' w='16800' x='8100' y='15600'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#005500' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='5' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{82AB84A1-8D9B-4E55-814A-7A78FA727CC0}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size maxheight='2000' maxwidth='1000' minheight='2000' minwidth='1000' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98700' id='7' param='horz' type-v2='layout-flow' w='97400' x='1300' y='650'>
+            <zone fixed-size='206' h='98700' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='97400' x='1300' y='650'>
+              <zone fixed-size='70' forceUpdate='true' h='3900' id='19' is-fixed='true' type-v2='text' w='97400' x='1300' y='650'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#ffffff' fontname='Poppins Black' fontsize='28'>DASHBOARD CREDIT CARD</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#005500' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='background-color' value='#ffffff' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#005500' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='5' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='26650' id='14' name='exp type' show-title='false' w='82800' x='9100' y='9250' />
+        <zone h='2600' id='104' type-v2='dashboard-object' w='20200' x='77800' y='4900'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{E30CBD76-48AD-49F4-9CE2-F5FF61E8347C}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Distributing</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+              <format attr='background-color' value='#55aa007e' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='2600' id='111' type-v2='dashboard-object' w='16400' x='60100' y='4900'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{0FFBEC6E-974B-438A-B035-A30237C3C341}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Home</caption>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+              <format attr='background-color' value='#55aa007e' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='133' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99200' id='132' param='vert' type-v2='layout-flow' w='98400' x='800' y='400'>
+                <zone fixed-size='70' forceUpdate='true' h='3900' id='19' type-v2='text' w='97400' x='1300' y='650'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff' fontname='Poppins Black' fontsize='28'>DASHBOARD CREDIT CARD</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#005500' />
+                  </zone-style>
+                </zone>
+                <zone h='2600' id='111' type-v2='dashboard-object' w='16400' x='60100' y='4900'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{0FFBEC6E-974B-438A-B035-A30237C3C341}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Home</caption>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+                      <format attr='background-color' value='#55aa007e' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2600' id='104' type-v2='dashboard-object' w='20200' x='77800' y='4900'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{E30CBD76-48AD-49F4-9CE2-F5FF61E8347C}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Distributing</caption>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Poppins' fontsize='12' />
+                      <format attr='background-color' value='#55aa007e' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='26650' id='14' is-fixed='true' name='exp type' show-title='false' w='82800' x='9100' y='9250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#005500' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='5' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{803B4531-D010-4D36-B8CC-00D881295E2B}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' source-height='44'>
+    <window class='worksheet' name='cities_transactions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' type='color' />
+            <card playctrls='0' show-title='false' slider='0' trailctrls='0' type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>2014</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A38ADA68-459E-434A-B491-A9548294F514}' />
+    </window>
+    <window class='worksheet' name='card type of transactions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4D9D60BA-B919-485F-BB10-75F4B5B4D316}' />
+    </window>
+    <window class='worksheet' name='Tren of transaction '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{ED56C2DE-B004-42E6-9916-7844DE2E271E}' />
+    </window>
+    <window class='worksheet' name='exp type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3BD2E40E-74FF-40D5-BF2C-D95DCD984994}' />
+    </window>
+    <window class='worksheet' name='gender_transaction'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.057fci4133buem17nctb60ws2v0t].[yr:Date:ok]' type='filter' />
+            <card pane-specification-id='2' param='[federated.057fci4133buem17nctb60ws2v0t].[none:Calculation_199847297339416576:nk]' type='color' />
+            <card pane-specification-id='2' param='[federated.057fci4133buem17nctb60ws2v0t].[__tableau_internal_object_id__].[cnt:Credit card transactions - India - Simple.csv_78882CEB39BB40CAA5FAA91430B55D0F:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A84C7C66-25A7-44A5-AF9C-49B521E5242F}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Tren of transaction '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='card type of transactions'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='gender_transaction'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{0FFBEC6E-974B-438A-B035-A30237C3C341}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='cities_transactions'>
+          <current-page>
+            <multibucket>
+              <bucket>2014</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{E30CBD76-48AD-49F4-9CE2-F5FF61E8347C}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='exp type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{345F22AB-D085-4213-8001-6C2C5D1CDC1B}' />
+    </window>
+  </windows>
+</workbook>

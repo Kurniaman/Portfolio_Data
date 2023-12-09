@@ -1,0 +1,11 @@
+employee _id,club_name,total_goals_this_year,total_assist_this_year,total_game_played_this_year,position
+1,Al-Nassr,25,5,22,Striker
+2,Inter Miami,20,40,41,Winger
+3,PSG,30,10,35,Striker
+4,Man City,40,0,30,Striker
+5,Real Madrid,15,15,18,Midfielder
+6,Liverpool,3,5,25,Defender
+7,Man United,10,10,23,Midfielder
+8,Aston Villa,0,0,30,Goalkeeper
+9,Arsenal,2,1,35,Defender
+10,Brighton,13,10,28,Winger
